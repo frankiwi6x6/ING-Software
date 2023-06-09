@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Veranum Hoteles - Reserva{% endblock %}
+
+{% block content %}
+<div class="buscar-habitaciones">
+    <form action="#">
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="ubicacion">Ubicación:</label>
+                <input type="" class="form-control" id="ubicacion">
+              </div>
+            <div class="col-md-4 mb-3">
+                <label for="personas">Número de personas:</label>
+                <input type="number" class="form-control" id="personas">
+              </div>
+            <div class="col-md-4 mb-3">
+                <label for="fecha-entrada">Fecha de entrada:</label>
+                <input type="date" class="form-control datepicker" id="fecha-entrada">
+              </div>
+            <div class="col-md-4 mb-3">
+                <label for="fecha-salida">Fecha de salida:</label>
+                <input type="date" class="form-control datepicker" id="fecha-salida">
+              </div>
+          </div>
+        <button type="submit" class="btn btn-primary">RESERVAR HABITACIÓN AHORA</button>
+      </form>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  $(document).ready(function () {
+    $('.datepicker').datepicker({
+      format: 'dd/mm/yyyy',  // Formato de la fecha
+      autoclose: true  // Cerrar automáticamente después de seleccionar una fecha
+    });
+  });
+</script>
+{% endblock %}
